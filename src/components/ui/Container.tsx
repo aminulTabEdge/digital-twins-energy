@@ -1,6 +1,6 @@
-import { IChildren } from "@/types";
+import { Children } from "@/types";
 
-type classNameProps = IChildren & {
+type classNameProps = Children & {
   className?: string;
   backgroundColor?: string;
 };

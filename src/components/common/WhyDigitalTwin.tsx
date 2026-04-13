@@ -1,6 +1,7 @@
 import React from "react";
 import { RiSecurePaymentLine, RiBankLine } from "react-icons/ri";
 import { TbLicense } from "react-icons/tb";
+import ScrollReveal from "../ui/ScrollReveal";
 
 const features = [
   {
@@ -34,29 +35,28 @@ const WhyDigitalTwin = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto text-white text-center">
         <div className="max-w-3xl mx-auto px-2 sm:px-4">
-          <h2
-            data-aos="fade-left"
-            className="text-2xl sm:text-3xl font-bold mb-4"
-          >
-            Why Digital Twin Energy LLC?
-          </h2>
-          <p
-            data-aos="fade-right"
-            className="text-sm sm:text-base mb-10 text-gray-300"
-          >
-            At Digital Twin Energy LLC, we combine advanced technology with
-            sustainable solutions to deliver reliable and efficient energy
-            systems. Our commitment to safety, compliance, and transparency sets
-            us apart in the clean energy sector.
-          </p>
+          <ScrollReveal direction="fade-left">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              Why Digital Twin Energy LLC?
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal direction="fade-right">
+            <p className="text-sm sm:text-base mb-10 text-gray-300">
+              At Digital Twin Energy LLC, we combine advanced technology with
+              sustainable solutions to deliver reliable and efficient energy
+              systems. Our commitment to safety, compliance, and transparency sets
+              us apart in the clean energy sector.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Cards Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 px-2 sm:px-0">
-          {features.map(({ id, icon, title, description }) => (
-            <div
-              data-aos="fade-up"
+          {features.map(({ id, icon, title, description }, index) => (
+            <ScrollReveal
+              direction="fade-up"
               key={id}
+              delay={index * 0.1}
               className="flex flex-col items-center text-center bg-white/5 p-6 rounded-xl backdrop-blur-sm"
             >
               {icon}
@@ -64,7 +64,7 @@ const WhyDigitalTwin = () => {
               <p className="mt-2 text-gray-200 text-sm sm:text-base">
                 {description}
               </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -73,3 +73,4 @@ const WhyDigitalTwin = () => {
 };
 
 export default WhyDigitalTwin;
+

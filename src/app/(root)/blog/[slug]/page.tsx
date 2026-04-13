@@ -1,9 +1,9 @@
 import blogPosts from "@/constant/blogPosts";
 import generateMetaTags from "@/seo/generateMetaTags";
-import { IParams } from "@/types";
+import { Params } from "@/types";
 import Image from "next/image";
 
-const BlogDetailsPage = async ({ params }: IParams) => {
+const BlogDetailsPage = async ({ params }: Params) => {
   const { slug } = await params;
   const idNumber = Number(slug);
 
@@ -63,7 +63,7 @@ const BlogDetailsPage = async ({ params }: IParams) => {
 export default BlogDetailsPage;
 
 // ------> SEO Starts
-export async function generateMetadata({ params }: IParams) {
+export async function generateMetadata({ params }: Params) {
   const { slug } = await params;
 
   // Fetch the blog based on the id

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope } from "react-icons/fa";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const contactDetails = [
   { id: 1, icon: FaPhone, text: "(+1) 605-592-6659" },
@@ -14,7 +15,7 @@ const contactDetails = [
 
 const ContactInfo = () => {
   return (
-    <div data-aos="fade-right" className="py-10 ">
+    <ScrollReveal direction="fade-right" className="py-10 ">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white/90 text-center mb-8">
           Contact Information
@@ -34,8 +35,9 @@ const ContactInfo = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </ScrollReveal>
   );
 };
 
 export default ContactInfo;
+

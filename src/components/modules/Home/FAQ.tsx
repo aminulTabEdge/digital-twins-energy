@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import SectionTitle from "@/components/ui/SectionTitle";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const faqData = [
   {
@@ -56,25 +57,27 @@ const FAQ = () => {
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">
         {/* FAQ Image */}
         <div className="mx-auto">
-          <Image
-            data-aos="fade-left"
-            // data-aos="fade-left"
-            src={"/assets/icon/FAQ.png"}
-            width={500}
-            height={500}
-            alt="FAQ image of TabEdge"
-            className="max-w-[80%] md:max-w-full"
-          />
+          <ScrollReveal direction="fade-left">
+            <Image
+              src={"/assets/icon/FAQ.png"}
+              width={500}
+              height={500}
+              alt="FAQ image of TabEdge"
+              className="max-w-[80%] md:max-w-full"
+            />
+          </ScrollReveal>
         </div>
 
         {/* Accordion Content */}
         <div className="max-w-xl w-full px-4">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqData.map((item) => (
+            {faqData.map((item, index) => (
               <AccordionItem key={item.value} value={item.value}>
-                <AccordionTrigger data-aos="fade-right">
-                  {item.question}
-                </AccordionTrigger>
+                <ScrollReveal direction="fade-right" delay={index * 0.1}>
+                  <AccordionTrigger>
+                    {item.question}
+                  </AccordionTrigger>
+                </ScrollReveal>
                 <AccordionContent>{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
@@ -86,3 +89,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+

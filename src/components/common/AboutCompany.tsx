@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Leaf, Home } from "lucide-react";
 import Container from "../ui/Container";
 import images from "@/constant/images";
+import ScrollReveal from "../ui/ScrollReveal";
 
 const imageSources = [
   { src: images.about.about1, alt: "Solar Workers" },
@@ -28,8 +29,9 @@ const AboutCompany = () => {
       <div className="relative w-full h-[400px] md:h-[500px] flex justify-center items-center ">
         <div className="absolute transform rotate-45 grid grid-cols-2  md:w-[360px] md:h-[360px]">
           {imageSources.map((image, index) => (
-            <div
-              data-aos="fade-right"
+            <ScrollReveal
+              direction="fade-right"
+              delay={index * 0.1}
               key={index}
               className="overflow-hidden border"
             >
@@ -40,13 +42,13 @@ const AboutCompany = () => {
                 height={200}
                 className="w-full h-full object-cover transform -rotate-45"
               />
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
 
       {/* Text Content */}
-      <div data-aos="fade-left">
+      <ScrollReveal direction="fade-left">
         <p className="text-muted-foreground text-sm font-semibold uppercase mb-2">
           About Our Company
         </p>
@@ -81,9 +83,10 @@ const AboutCompany = () => {
             More About Solartech →
           </a>
         </div>
-      </div>
+      </ScrollReveal>
     </Container>
   );
 };
 
 export default AboutCompany;
+

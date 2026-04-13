@@ -2,6 +2,7 @@ import { Flame, Sun } from "lucide-react";
 import TypeWritter from "./TypeWritter";
 import Image from "next/image";
 import images from "@/constant/images";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const HeroSection = () => {
   return (
@@ -13,38 +14,39 @@ const HeroSection = () => {
             <TypeWritter />
           </div>
           <div>
-            <Image
-              data-aos="fade-up"
-              data-aos-duration="3000"
-              src={images.solar.solar}
-              alt="image of Solar and gas line "
-              height={400}
-              width={800}
-              className="object-cover"
-            />
+            <ScrollReveal direction="fade-up" duration={2}>
+              <Image
+                src={images.solar.solar}
+                alt="image of Solar and gas line "
+                height={400}
+                width={800}
+                className="object-cover"
+                priority
+              />
+            </ScrollReveal>
           </div>
         </header>
         {/* Services */}
         <div className="pb-[30px] mt-8">
-          <h1 className="text-xl font-semibold">Our Service</h1>
+          <h2 className="text-xl font-semibold">Our Service</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            <div data-aos="fade-right">
+            <ScrollReveal direction="fade-right">
               <Sun className="w-14 h-14 text-yellow-500" />
-              <h4 className="text-lg mt-3 dark:text-white/90">Solar Energy</h4>
-              <p className="text-sm text-gray-500 dark:text-white/60 mt-1">
+              <h3 className="text-lg mt-3 dark:text-white/90">Solar Energy</h3>
+              <p className="text-sm text-gray-600 dark:text-white/60 mt-1">
                 Optimize solar energy systems through simulation, predictive
                 analytics, and real-time monitoring.
               </p>
-            </div>
-            <div data-aos="fade-left">
+            </ScrollReveal>
+            <ScrollReveal direction="fade-left">
               <Flame className="w-14 h-14 text-orange-600" />
-              <h4 className="text-lg mt-3 dark:text-white/90">Oil & Gas</h4>
-              <p className="text-sm text-gray-500 dark:text-white/60 mt-1">
+              <h3 className="text-lg mt-3 dark:text-white/90">Oil & Gas</h3>
+              <p className="text-sm text-gray-600 dark:text-white/60 mt-1">
                 Enhance safety, efficiency, and maintenance of oil and gas
                 infrastructure using digital twin modeling.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
 
@@ -56,3 +58,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

@@ -2,10 +2,10 @@ import Footer from "@/components/layouts/Footer/Footer";
 import DesktopNavbar from "@/components/layouts/Navbar/DesktopNavbar";
 import MobileNavbar from "@/components/layouts/Navbar/MobileNavbar";
 import { Metadata } from "next";
-import { IChildren } from "@/types";
+import { Children } from "@/types";
 import generateMetaTags from "@/seo/generateMetaTags";
 
-// --> SEO Starts
+//  SEO
 export const metadata: Metadata = generateMetaTags({
   title: "Digital Twin Energy LLC - AI-Driven Energy Optimization Solutions",
   description:
@@ -13,9 +13,9 @@ export const metadata: Metadata = generateMetaTags({
   keywords:
     "Digital Twin Energy, AI energy optimization, renewable energy AI, solar energy optimization, wind energy solutions, oil and gas AI, energy production technology, energy efficiency, smart energy solutions, Mr. Saikot, clean energy AI, digital energy systems",
 });
-// --> SEO End
 
-const MainLayout = ({ children }: IChildren) => {
+
+const MainLayout = ({ children }: Children) => {
   return (
     <div className="flex min-h-screen flex-col">
       <DesktopNavbar />

@@ -3,12 +3,12 @@ import { MetaConfig } from "@/types";
 const metaConfig: MetaConfig = {
   baseUrl: "https://www.digitaltwinsenergy.com",
   baseImage: "/assets/image/seo/solar.png",
-  site_name: "digitaltwinsenergy",
-  website_category: "Health",
-  applicationName: "Digital Twins Energy",
+  site_name: "Digital Twins Energy",
+  website_category: "Energy & Technology",
+  applicationName: "Digital Twins Energy LLC",
   facebook_app_id: "580317868506376",
   authors_name: "Saikot",
-  authorPortfolio: "http://www.xyx.com/john-doe",
+  authorPortfolio: "https://www.digitaltwinsenergy.com",
   twitter_site: "@digitaltwinsenergy",
   protectedCrawlRoutes: ["/dashboard", "/admin"],
 };

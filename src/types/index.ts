@@ -1,9 +1,9 @@
 export type { MetaProps, Routes, MetaConfig } from "./meta.types";
 export type {
   DivProps,
-  IChildren,
+  Children,
   IGlobalError,
-  IParams,
+  Params,
   SectionProps,
 } from "./react.types";
 

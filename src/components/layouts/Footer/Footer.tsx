@@ -17,6 +17,7 @@ const Footer = () => {
                 alt="Digital Twin Energy LLC logo"
                 width={96}
                 height={96}
+                style={{ height: "auto" }}
               />
               <p className="text-2xl font-semibold text-white">
                 Digital Twins Energy

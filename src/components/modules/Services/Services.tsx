@@ -1,16 +1,17 @@
 import servicesData from "@/constant/servicesData";
 import Image from "next/image";
 import Container from "../../ui/Container";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const Services = () => {
   return (
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
-        {servicesData?.map((item) => {
+        {servicesData?.map((item, index) => {
           return (
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
+            <ScrollReveal
+              direction="fade-up"
+              delay={index * 0.1}
               key={item.id}
               className="bg-slate-100 dark:bg-slate-900 overflow-hidden group cursor-pointer flex flex-col justify-between"
             >
@@ -38,7 +39,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
           );
         })}
       </div>
@@ -47,3 +48,4 @@ const Services = () => {
 };
 
 export default Services;
+

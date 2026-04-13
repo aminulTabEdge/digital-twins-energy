@@ -1,10 +1,10 @@
 import React from "react";
 
-export interface IChildren {
+export interface Children {
   children: React.ReactNode;
 }
 
-export interface IParams {
+export interface Params {
   params: Promise<{ slug: string }>;
 }
 
